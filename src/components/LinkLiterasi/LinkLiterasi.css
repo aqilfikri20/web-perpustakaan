@@ -1,0 +1,112 @@
+
+
+.logo-literasi {
+    --transition-duration: 0.3s;
+  --transition-delay: 0.2s;
+  height: 15%;
+    width: 90%;
+    border: 1px solid #ccc;
+    margin-bottom: 7px;
+    padding: 0;
+    background-color: white;
+}
+
+hr {
+  border-color: green;
+  margin: 20px 0;
+}
+
+.logo-literasi li {
+  margin-right: 70px;
+}
+
+.logo-literasi a {
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+.logo-literasi .border {
+  position: absolute;
+  left: 0;
+  background: green;
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.logo-literasi .border-top,
+.logo-literasi .border-bottom {
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+}
+
+.logo-literasi .border-left,
+.logo-literasi .border-right {
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+}
+
+.logo-literasi .border-top,
+.logo-literasi .border-left,
+.logo-literasi .border-right {
+  top: 0;
+}
+
+.logo-literasi .border-bottom {
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+.logo-literasi .border-top {
+  transform-origin: top left;
+}
+
+.logo-literasi .border-left {
+  transform-origin: bottom left;
+}
+
+.logo-literasi .border-right {
+  left: auto;
+  right: 0;
+  transform-origin: top right;
+}
+
+.logo-literasi a:hover .border-top,
+.logo-literasi a:hover .border-bottom {
+  transform: scaleX(1);
+}
+
+.logo-literasi a:hover .border-left,
+.logo-literasi a:hover .border-right {
+  transform: scaleY(1);
+}
+
+.logo-literasi a:hover .border-right {
+  transition-delay: var(--transition-delay);
+}
+
+.logo-literasi a:hover .border-bottom {
+  transition-delay: calc(var(--transition-delay) * 2);
+}
+
+.logo-literasi a:hover .border-left {
+  transition-delay: calc(var(--transition-delay) * 3);
+}
+
+
+/* ANIMATIONS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.logo-literasi[data-animation="diagonal"] .border-left {
+  transform-origin: top left;
+}
+
+.logo-literasi[data-animation="diagonal"] .border-right,
+.logo-literasi[data-animation="diagonal"] .border-bottom {
+  transform-origin: bottom right;
+}
+
+.logo-literasi[data-animation="diagonal"] a:hover [class^=border]{
+  transition-delay: 0s;
+}
+

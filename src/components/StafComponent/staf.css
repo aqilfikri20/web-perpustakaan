@@ -1,0 +1,128 @@
+.StafCard {
+    display: flex;
+    flex-direction:row; 
+    align-items: center;
+    margin-left:50px;
+    margin:0 auto;
+    margin-top: 10px;
+    width:95%;
+    background-color:var(--background-white) ;
+    height: 220px;
+    overflow-y: hidden;
+    border-radius: 10px;
+    border: solid 1px #000000;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.StafCard:hover{
+  background-color: #007f39;
+  color: white;
+  border: solid 1px #ffffff;;
+}
+
+.image-staf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 3px;
+    position: relative; 
+    width :200px;
+    margin-right: 30px;
+    margin-left: 30px;
+    height: 220px;
+  }
+
+.image-staf img {
+    max-height: 220px; 
+    width:auto;
+}
+
+
+.wrap-staf{
+    border-top:4px solid #007f39;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:var(--background-alice) ;
+  }
+
+.container-staf{
+    width: 100%;
+    height: 90%;
+    padding-bottom: 25px;
+}
+
+.content-staf{
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column; 
+    height: 220px;
+    width: 600px;
+    margin: 0;
+    overflow-x:auto;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    height: 95%;
+    border-collapse: collapse;
+    word-break: break-word;
+  }
+  th, td {
+    padding: 10px;
+  }
+  th {
+    width: 35%;
+    text-align: left;
+  }
+  td {
+    width: 70%;
+    word-break: break-word; 
+    vertical-align: top; 
+  }
+
+.text-staf{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2px;
+    margin-top: 12px;
+   height: 20%;
+   width: 95%;
+    overflow-y:hidden;
+}
+
+@media (max-width: 768px) {
+  .image-staf img {
+    max-height: 200px;
+    height: auto; 
+    width:auto;
+}
+
+.image-staf {
+  max-width :100%;
+  margin-right: 10px;
+  margin-left: 10px;
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.StafCard{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.content-staf{
+  width: 100%;
+
+  th {
+    width: 27%;
+    text-align: left;
+  }
+}
+}

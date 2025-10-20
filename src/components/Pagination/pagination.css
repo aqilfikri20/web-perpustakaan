@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+.container-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 3px;
+  
+}
+.pagination {
+    margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 8px;
+  flex: 1;
+  margin: 5px;
+  background: #dde1e7;
+  color:black;
+  border-radius: 3px;
+  box-shadow: -3px -3px 5px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+.pagination button:first-child {
+  width: 120px;
+}
+.pagination button:last-child{
+  width: 120px;
+}
+
+.pagination button.active {
+  font-size: 17px;
+  color: #ffffff;
+  background-color:#007f39;
+}
+.pagination button:first-child {
+  margin: 0 10px 0 0;
+}
+.pagination button:last-child {
+  margin: 0 0 0 10px;
+}
+
+.cursor button:hover{
+    color: #ffffff;
+    background-color:#007f39;
+}
+
+@media (max-width: 768px) {
+  .pagination button{
+    padding: 2px;
+    max-width: 50px;
+  }
+}
