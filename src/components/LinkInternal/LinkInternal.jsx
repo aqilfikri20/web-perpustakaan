@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "./Linkinternal.css";
+import "./linkinternal.css";
 
 const LinkInternal = (any) => {
     return(
