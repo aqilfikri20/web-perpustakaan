@@ -22,7 +22,7 @@ const NewsForPage = ({ data }) => {
                 <div className="image-nfp">
                 {item.image && item.image.url && (
                     <Image
-                      src={`http://localhost:1337${item.image.url}`}
+                      src={`${APIURL}/${item.image.url}`}
                       alt={item.title}
                       width={1000}
                       height={1000}

@@ -3,7 +3,8 @@ import BeritaComponent from "../components/BeritaComponent/BeritaComponent";
 
 
 export default async function Home() {
-  let response = await fetch('http://localhost:1337/api/posts?populate=*&sort=')
+  const APIURL = process.env.NEXT_PUBLIC_APIURL;
+  let response = await fetch(`${APIURL}/api/posts?populate=*&sort=`)
   let {data: posts} = await response.json()
 
   return (

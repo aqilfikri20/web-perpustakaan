@@ -1,7 +1,8 @@
 import PostComponent from "@/components/PostComponent/PostComponent"
 
 export default async function visimisi() {
-  let response = await fetch('http://localhost:1337/api/visimisi?populate=*')
+  const APIURL = process.env.NEXT_PUBLIC_APIURL;
+  let response = await fetch(`${APIURL}/api/visimisi?populate=*`)
   let {data: visimisis} = await response.json()
 
   return (

@@ -1,7 +1,8 @@
 import PostComponent from "@/components/PostComponent/PostComponent"
 
 export default async function keanggotaan() {
-  let response = await fetch('http://localhost:1337/api/keanggotaans?populate=*')
+  const APIURL = process.env.NEXT_PUBLIC_APIURL;
+  let response = await fetch(`${APIURL}/api/keanggotaans?populate=*`)
   let {data: keanggotaans} = await response.json()
 
   return (

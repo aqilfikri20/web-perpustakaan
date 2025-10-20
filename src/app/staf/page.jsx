@@ -1,7 +1,8 @@
 import StafComponent from "@/components/StafComponent/StafComponent"
 
 export default async function staf() {
-  let response = await fetch('http://localhost:1337/api/stafs?populate=*')
+  const APIURL = process.env.NEXT_PUBLIC_APIURL;
+  let response = await fetch(`${APIURL}/api/stafs?populate=*`)
   let {data: posts} = await response.json()
 
   return (

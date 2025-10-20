@@ -1,7 +1,8 @@
 import PostComponent from "@/components/PostComponent/PostComponent"
 
 export default async function renstra() {
-  let response = await fetch('http://localhost:1337/api/renstras?populate=*')
+  const APIURL = process.env.NEXT_PUBLIC_APIURL;
+  let response = await fetch(`${APIURL}/api/renstras?populate=*`)
   let {data: renstras} = await response.json()
 
   return (

@@ -2,9 +2,9 @@ import DetailComponent from "@/components/DetailComponent/DetailComponent";
 
 export default async function BeritaDetail({ params }) {
     const { slug } =  await params;
-
+    const APIURL = process.env.NEXT_PUBLIC_APIURL;
     // Fetch data langsung di server component
-    const res = await fetch(`http://localhost:1337/api/posts?filters[slug][$eq]=${slug}&populate[author]=true&populate[image]=true`, {
+    const res = await fetch(`${APIURL}/api/posts?filters[slug][$eq]=${slug}&populate[author]=true&populate[image]=true`, {
         cache: "no-store", // Hindari caching untuk data dinamis
     });
 

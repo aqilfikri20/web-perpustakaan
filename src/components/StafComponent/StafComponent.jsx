@@ -17,7 +17,7 @@ const StafComponent = ({ data }) => {
               <StafCard key={item.id}>
                 <div className="image-staf">
                   <Image
-                    src={item.image ? `http://localhost:1337${item.image.formats.large.url}` : "/images/default.png"}
+                    src={item.image ? `${APIURL}/${item.image.formats.large.url}` : "/images/default.png"}
                     alt={item.nama}
                     width={1000}
                     height={1000}
