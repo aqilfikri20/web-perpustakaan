@@ -35,13 +35,12 @@ const BeritaComponent = ({ data }) => {
               month: 'long',
               year: 'numeric'
             });
-            const APIURL = process.env.NEXT_PUBLIC_APIURL;
             return (
               <CardBerita key={item.id} slug={item.slug}>
                 <div className="image-news">
                 {item.image && item.image.url && (
                     <Image
-                      src={`${APIURL}${item.image.url}`}
+                      src={`${process.env.NEXT_PUBLIC_APIURL}${item.image.url}`}
                       alt={item.title}
                       width={1000}
                       height={1000}
