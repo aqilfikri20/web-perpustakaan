@@ -16,6 +16,7 @@ const NewsForPage = ({ data }) => {
           month: 'long',
           year: 'numeric'
         });
+        const APIURL = process.env.NEXT_PUBLIC_APIURL;
 
         return (
           <CardNFP key={item.id} slug={item.slug}>
