@@ -3,6 +3,8 @@ import StafCard from "./StafCard";
 import Image from "next/image";
 
 const StafComponent = ({ data }) => {
+  const APIURL = process.env.NEXT_PUBLIC_APIURL;
+
 
   return (
       <div className="wrap-staf">
